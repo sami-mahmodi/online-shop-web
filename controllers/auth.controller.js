@@ -41,7 +41,7 @@ async function login(req, res) {
   }
 
   authUtil.createUserSession(req, existingUser, function () {
-    res.redirect("/all-products");
+    res.redirect("/");
   });
 }
 
@@ -49,4 +49,5 @@ module.exports = {
   getSignup: getSignup,
   signup: signup,
   getLogin: getLogin,
+  login: login,
 };
